@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'echo "This is a test" + $name > newfile.txt'
+        sh './testscript.sh'
+        sh 'echo "Ran the shell script" '
       }
     }
 
@@ -13,8 +14,5 @@ pipeline {
       }
     }
 
-  }
-  environment {
-    name = ''
   }
 }
